@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jupiter - Experience Luxury</title>
+  <style>
+    /* Body Styling */
+    body {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('JUPITER.jpg');
+      background-size: cover;
+      color: #f7f7f7;
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      font-weight: 800;
+      color: #ffd700;
+      margin-top: 50px;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      letter-spacing: 1px;
+      animation: fadeInDown 1.5s ease-out;
+    }
+
+    /* Content Styling */
+    .content {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Paragraph and List Styling */
+    p, ul {
+      font-size: 1.2em;
+      font-weight: 500;
+      line-height: 1.6;
+      color: #eee;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    li {
+      margin: 10px 0;
+    }
+
+    /* Price Styling */
+    .price-list {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #ffd700;
+      margin: 20px 0;
+    }
+
+    /* Contact Button */
+    .contact-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      color: #333;
+      background-color: #ffd700;
+      font-size: 1.1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5);
+    }
+    .contact-button:hover {
+      background-color: #e6b800;
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(230, 184, 0, 0.6);
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: #333;
+      padding: 40px;
+      border-radius: 12px;
+      color: #ffd700;
+      text-align: center;
+      width: 80%;
+      max-width: 400px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      animation: slideInUp 0.5s ease;
+    }
+    .close-button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #d9534f;
+      color: white;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .close-button:hover {
+      background-color: #c9302c;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <h1>Jupiter - Key Features</h1>
+
+  <!-- Content Section -->
+  <div class="content">
+    <ul>
+      <li>Best-in-class footboard space</li>
+      <li>Large underseat storage (17 liters)</li>
+      <li>External power socket for added convenience</li>
+      <li>Retractable bag hooks for easy storage</li>
+      <li>Analog instrument cluster with Economy and Power modes</li>
+    </ul>
+
+    <div class="price-list">
+      <h2>Jupiter Price List</h2>
+      <ul>
+        <li>SMW ₹73,650</li>
+        <li>Base ₹78,238</li>
+        <li>ZX Drum SmartXonnect ₹85,358</li>
+        <li>ZX Disc SmartXonnect ₹89,913</li>
+        <li>Classic ₹90,573</li>
+      </ul>
+      <p>Ex-Showroom prices (exclusive of mandatory and other accessories).</p>
+    </div>
+
+    <!-- Contact Us Button -->
+    <a href="#" class="contact-button" onclick="openModal()">Contact Us for More Info</a>
+  </div>
+
+  <!-- Modal for Contact Information -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <h2>Contact Us</h2>
+      <p>For more details or to purchase, call us at:</p>
+      <p><strong>9304289399</strong></p>
+      <button class="close-button" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to open the modal
+    function openModal() {
+      document.getElementById('contactModal').style.display = 'flex';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+
+    // Close the modal if user clicks outside the modal content
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVS - Maa Agency</title>
+  <style>
+    /* General Body and Background */
+    body {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('TVS.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Header Styling */
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      color: gold;
+      animation: slideDown 1s ease-out;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.75);
+      animation: fadeIn 0.7s ease-in-out forwards;
+    }
+    .navbar a {
+      color: #fff;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 12px 20px;
+      border-radius: 6px;
+      transition: background-color 0.4s, transform 0.3s;
+    }
+    .navbar a:hover {
+      background-color: #ffd700;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    /* Welcome Section */
+    .welcome {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+      color: #333;
+    }
+    .welcome p {
+      font-size: 1.4em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Button Styling */
+    .button {
+      padding: 14px 30px;
+      background-color: #ff9800;
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+    .button:hover {
+      background-color: #e87c00;
+      transform: scale(1.1);
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      padding: 35px;
+      background-color: #fff;
+      border-radius: 12px;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      animation: modalFadeIn 0.6s ease;
+      color: #333;
+    }
+    .close-button {
+      padding: 10px 24px;
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1em;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    .close-button:hover {
+      background-color: #c9302c;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.8em;
+        padding: 30px 15px;
+      }
+      .navbar a {
+        font-size: 1em;
+        padding: 10px 15px;
+      }
+      .welcome p {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>Welcome to Maa Agency - TVS</header>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="PAGE2.HTML">View Our Products</a>
+    <a href="#" onclick="openModal()">Contact Us</a>
+    <a href="DMS.py">Go to DMS</a>
+  </div>
+
+  <!-- Welcome Section -->
+  <div class="welcome">
+    <p>Welcome to Maa Agency! Experience the thrill of our exclusive TVS bikes and services, crafted to give you an unparalleled ride. Dive into our world of adventure and excellence.</p>
+    <a href="PAGE2.HTML" class="button">Explore Products and Services</a>
+  </div>
+
+  <!-- Modal for Contact Information -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <h2>Contact Information</h2>
+      <p>For inquiries, reach us at:</p>
+      <p><strong>Phone: 9304289399</strong></p>
+      <button class="close-button" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to open the modal
+    function openModal() {
+      document.getElementById('contactModal').style.display = 'flex';
+    }
+
+    // JavaScript to close the modal
+    function closeModal() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+
+    // Close modal if user clicks outside modal content
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Products</title>
+    <style>
+        /* General Body Styles */
+        body {
+            background-image: url('TVS_GROUP.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f0f0f0;
+            font-family: 'Georgia', serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+            overflow-x: hidden;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            .link-button {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+            .products-list li {
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+            animation: slideDown 1s ease forwards;
+            color: gold;
+        }
+
+        /* Paragraph Styles */
+        p {
+            font-size: 1.3em;
+            font-weight: 500;
+            margin: 15px 0;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        /* Product List Styles */
+        .products-list {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        .products-list li {
+            margin: 8px 0;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 12px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .products-list li:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+        }
+
+        /* Button Styles */
+        .link-button {
+            display: inline-block;
+            margin: 20px 10px;
+            padding: 12px 25px;
+            color: #f0f0f0;
+            background-color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 1.1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        .link-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 40px;
+            font-size: 1em;
+            color: #cccccc;
+            animation: fadeIn 1.5s ease forwards;
+            opacity: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // Smooth Scroll for links
+        document.querySelectorAll('.link-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                window.location.href = href;
+            });
+        });
+    </script>
+
+    <h1>Our Exclusive Products</h1>
+
+    <p>Explore our premium products:</p>
+    <ul class="products-list">
+        <li>1. Jupiter</li>
+        <li>2. Wego</li>
+        <li>3. Apache</li>
+    </ul>
+
+    <p>To view our Jupiter and its features:</p>
+    <a href="PAGE3.HTML" class="link-button">View Jupiter</a>
+
+    <p>To view our Wego and its features:</p>
+    <a href="PAGE4.HTML" class="link-button">View Wego</a>
+
+    <p>To view our Apache and its features:</p>
+    <a href="DMS.py" class="link-button">Go to DMS</a>
+
+    <footer>
+        <p>&copy; 2024 TVS Group. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

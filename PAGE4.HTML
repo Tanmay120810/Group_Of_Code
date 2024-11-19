@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wego - Unparalleled Luxury & Performance</title>
+  <style>
+    /* Body Styling */
+    body {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('WEGO.jpg');
+      background-size: cover;
+      color: #f7f7f7;
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Header Styling */
+    h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #ffd700;
+      margin-top: 40px;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #32cd32;
+      margin: 30px 0 15px;
+      font-weight: 600;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Content Styling */
+    .content {
+      max-width: 850px;
+      margin: 20px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    /* Paragraph and List Styling */
+    p, ul {
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #eee;
+      line-height: 1.6;
+      text-align: left;
+      margin: 0 auto;
+      padding: 10px;
+      max-width: 80%;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+
+    /* Button Styling */
+    .contact-button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-top: 20px;
+      background-color: #ffd700;
+      color: #333;
+      font-size: 1.1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.4);
+    }
+    .contact-button:hover {
+      background-color: #e6b800;
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(230, 184, 0, 0.6);
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background-color: #333;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 80%;
+      max-width: 400px;
+      color: #ffd700;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      animation: slideDown 0.5s ease-out;
+    }
+    .close-button {
+      padding: 10px 20px;
+      background-color: red;
+      color: white;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .close-button:hover {
+      background-color: darkred;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <h1>Wego - Key Features</h1>
+
+  <!-- Content Section -->
+  <div class="content">
+    <ul>
+      <li>Stainless steel muffler guard</li>
+      <li>Full digital speedometer with service reminder, low battery indicator, trip meter, and clock</li>
+      <li>Body-coloured grab rails and blacked-out alloy wheels</li>
+      <li>Two-tone color options for a modern look</li>
+    </ul>
+
+    <h2>Engine & Transmission</h2>
+    <ul>
+      <li>Engine Type: Single Cylinder, 4 Stroke, Air-cooled Spark Ignition</li>
+      <li>Displacement: 109.7 cc</li>
+      <li>Max Torque: 8.0 Nm @ 5500 rpm</li>
+      <li>Max Power: 4.74 HP @ 7500 rpm</li>
+    </ul>
+
+    <p>Visit Maa Agency or contact us directly to discover more or make a purchase:</p>
+    <button class="contact-button" onclick="openModal()">Contact Us</button>
+  </div>
+
+  <!-- Modal for Contact Information -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <h2>Contact Information</h2>
+      <p>Reach us at:</p>
+      <p><strong>Phone: 9304289399</strong></p>
+      <button class="close-button" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to open the modal
+    function openModal() {
+      document.getElementById('contactModal').style.display = 'flex';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+
+    // Close the modal if the user clicks outside of it
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

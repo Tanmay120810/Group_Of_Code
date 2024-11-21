@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        /* div selector */
+        div{
+            background-color: aqua;
+            color: black;
+        }
+        /* class selector */
+        .red{
+            background-color: gray;
+            color: black;
+        }
+        /* id selector */
+        #green{
+            background-color: blue;
+            color: white;
+        }
+        /* child selector */
+        div > p{
+            background-color: burlywood;
+            color: orangered;
+        }
+        /* descendant selector */
+        div p{
+            background-color: red;
+            color: yellow;
+            
+        }
+        /* universal selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* pseudo selector */
+        a:visited{
+            color: gold;
+        }
+
+        a:link{
+            color: black;
+        }
+
+        a:active{
+            background-color: red;
+            color: yellow;
+        }
+
+        a:hover{
+            background-color: crimson;
+        }
+
+        p:first-child{
+            background-color: red;
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main class="one">
+        <p>I Am First</p>
+        <p>I Am Second</p>
+    </main>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus possimus quia mollitia itaque, veniam consequuntur. Sit, voluptatum eaque inventore repellendus possimus odio.
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolore rem saepe voluptate quo quae impedit mollitia possimus harum? Totam.
+        </p>
+    </div>
+
+    <div class="red">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nulla quisquam soluta nesciunt placeat maiores mollitia maxime error sequi? Voluptatem necessitatibus dolor fuga mollitia! Quam molestias ipsum amet dolores molestiae.
+    </div>
+
+    <div id="green">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor optio a suscipit fuga earum omnis vitae voluptatibus sed illum praesentium tempore, perferendis eos necessitatibus maiores nesciunt consectetur corrupti! Repellat, ratione!
+    </div>
+
+    <a href="https://www.google.com">Go To Google</a><br>
+    <a href="https://www.facebook2.com">Go To Facebook</a>
+    
+</body>
+</html>

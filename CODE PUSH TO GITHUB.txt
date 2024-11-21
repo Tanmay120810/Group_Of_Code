@@ -1,0 +1,8 @@
+git config --global user.name "firstname lastname"
+git config --global user.email "email id"
+git init
+git remote add origin <ssh>
+touch .gitignore
+git add .
+git commit -m "apna msj daalo"
+git push origin master

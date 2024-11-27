@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4285f4;
+            letter-spacing: 1px;
+        }
+
+        nav input[type="text"] {
+            width: 300px;
+            height: 40px;
+            padding: 0 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #555;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #f1f1f1;
+            color: #000;
+        }
+
+        .main-content {
+            text-align: center;
+            margin: 50px 0;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            display: inline-block;
+        }
+
+        .google input[type="text"] {
+            width: 50%;
+            max-width: 500px;
+            height: 40px;
+            padding: 0 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+        }
+
+        .google {
+            margin: 20px 0;
+        }
+
+        .link {
+            margin: 20px 0;
+        }
+
+        .link a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #4285f4;
+            margin: 0 10px;
+        }
+
+        .offer {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .last {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .ad {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .ad a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        .ad a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">P-Google</div>
+            <input type="text" name="search" placeholder="Search Google or type a URL">
+            <div class="nav-links">
+                <a href="https://mail.google.com" target="_blank">Gmail</a>
+                <a href="https://www.google.com/imghp" target="_blank">Images</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1>
+            <span style="color: #2970e3;">P</span>
+            <span style="color: #e81313;">a</span>
+            <span style="color: #ffd726;">r</span>
+            <span style="color: #2970e3;">a</span>
+            <span style="color: #1a8f14;">s</span>
+            <span style="color: #e81313;">h</span>
+            <span style="color: #2970e3;">a</span>
+            <span style="color: #1a8f14;">r</span>
+            <span style="color: #2970e3;">G</span>
+            <span style="color: #e81313;">o</span>
+            <span style="color: #ffd726;">o</span>
+            <span style="color: #2970e3;">g</span>
+            <span style="color: #1a8f14;">l</span>
+            <span style="color: #e81313;">e</span>
+        </h1>
+        <div class="google">
+            <input type="text" name="google" placeholder="Search Here">
+        </div>
+        <div class="link">
+            <a href="https://www.google.com" target="_blank">Google Search</a>
+            <a href="https://doodles.google/" target="_blank">I'm Feeling Lucky</a>
+        </div>
+    </div>
+
+    <div class="offer">
+        <p>Google offered in:</p>
+        <a href="#">Hindi</a>
+        <a href="#">Bengali</a>
+        <a href="#">Gujarati</a>
+        <a href="#">Marathi</a>
+        <a href="#">English</a>
+    </div>
+
+    <footer>
+        <div class="last">
+            <h2>India</h2>
+        </div>
+        <div class="ad">
+            <a href="https://about.google/?utm_source=google-IN&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+            <a href="https://ads.google.com/intl/en_in/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+            <a href="https://www.google.com/intl/en_in/business/">Business</a>
+            <a href="https://www.google.com/search/howsearchworks/?fg=1">How Search Works</a>
+        </div>
+    </footer>
+</body>
+
+</html>
